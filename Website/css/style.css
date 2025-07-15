@@ -18,6 +18,13 @@ ul {
 }
 
 /* Header & Navigation */
+/* Header & Navigation */
+.logo img {
+  max-height: 100px;   /* shrink this number to taste */
+  width: auto;
+  display: block;
+}
+
 .site-header {
   position: relative;
   background: url('../images/hero-bg.jpg') no-repeat center/cover;
@@ -26,12 +33,20 @@ ul {
   flex-direction: column;
   justify-content: space-between;
 }
+
+/* ── Remove flex‑spacing gap under the nav ── */
+.site-header {
+  display: block !important;
+  height: auto !important;
+  background: none !important;  /* if you still see the old hero-bg.jpg peeking through */
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgb(210, 212, 209);
 }
 .logo {
   font-size: 1.8rem;
@@ -91,30 +106,56 @@ ul {
 
 /* Hero */
 .hero {
+  background: url('../images/working.jpg') no-repeat center/cover;
+  background-size: cover;
+  padding: 120px 20px;     /* vertical space, tweak as needed */
   text-align: center;
   color: #fff;
-  padding-bottom: 60px;
+  position: relative;      /* for any overlays/positioned children */
 }
+
 .hero h1 {
   font-size: 3.5rem;
   margin-bottom: 20px;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  position: relative;      /* bring above background */
+  z-index: 1;
 }
+
 .hero p {
   font-size: 1.3rem;
   margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
 }
-.btn {
-  background: #00aaff;
-  color: #fff;
-  padding: 12px 28px;
-  border-radius: 5px;
-  font-size: 1rem;
-  transition: background 0.3s ease;
+
+.hero .btn {
+  position: relative;
+  z-index: 1;
 }
-.btn:hover {
-  background: #008ecc;
+
+/* add a semi‑transparent overlay over the hero image */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;                       /* top:0; right:0; bottom:0; left:0; */
+  background: rgba(0, 0, 0, 0.4); /* adjust opacity (0.2–0.6) to taste */
+  z-index: 0;
 }
+
+/* ensure your text & button sit above the overlay */
+.hero h1,
+.hero p,
+.hero .btn {
+  position: relative;
+  z-index: 1;
+}
+
+/* optional: give the button text a little shadow for extra legibility */
+.hero .btn {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+}
+
 
 /* Section Titles */
 .section-title {
@@ -311,4 +352,43 @@ ul {
   .footer-bottom {
     padding: 0 20px;
   }
+}
+
+/* Our Team Grid */
+.team {
+  padding: 60px 20px;
+  background: #f9f9f9;
+}
+.team .section-title {
+  margin-bottom: 40px;
+}
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.team-member {
+  text-align: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.team-member img {
+  width: 100%;
+  max-width: 140px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+.team-member h3 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+.team-member p {
+  color: #555;
+  font-size: 0.95rem;
 }
