@@ -1,11 +1,12 @@
--fill out index.html
--fix company and products links on header
--standardize header and footer
--fill out about us
--fill out our team (awaiting heirarchy and headshots)
--update careers, one position (business major internships)
-    -where will this link to?
--fill out products
-    -gallery?
--update contact (make form work!)
--verify legalese of privacy page
+        -fill out index.html
+DONE    -fix company and products links on header
+WIP     -standardize header and footer
+        -fill out about us
+        -fill out our team (awaiting heirarchy and headshots)
+        -update careers, one position (business major internships)
+            -where will this link to?
+        -fill out products
+            -gallery?
+        -update contact (make form work!)
+        -verify legalese of privacy page
+        -make CSS look nice
