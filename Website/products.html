@@ -8,40 +8,15 @@
 </head>
 <body>
 
-  <!-- Header + Hero -->
-  <header class="site-header">
-    <nav class="nav">
-      <div class="logo">Arsenal Nexus</div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
+  <!-- HEADER (injected via includes/js/includes.js) -->
+  <div id="site-header"></div>
 
-<li class="dropdown">
-  <a href="#" class="dropbtn">Company</a>
-  <ul class="dropdown-content">
-    <li><a href="company.html">About Us</a></li>
-    <li><a href="our-team.html">Our Team</a></li>
-    <li><a href="careers.html">Careers</a></li>
-  </ul>
-</li>
-
-
-        <li class="dropdown">
-          <a href="#" class="dropbtn">Products</a>
-          <ul class="dropdown-content">
-            <li><a href="products.html">View Products</a></li>
-          </ul>
-        </li>
-
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-
-    <div class="hero">
-      <h1>Our Products</h1>
-      <p>Explore the range of innovative drone solutions we offer.</p>
-      <a href="#products" class="btn">Learn More</a>
-    </div>
-  </header>
+  <!-- HERO BANNER -->
+  <div class="hero">
+    <h1>Welcome to Arsenal Nexus</h1>
+    <p>Innovative drone solutions for your business</p>
+    <a href="company.html" class="btn">Learn More</a>
+  </div>
 
   <!-- Main Content -->
   <main>
@@ -85,51 +60,11 @@
     </section>
   </main>
 
-  <!-- Footer -->
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="footer-subscribe">
-      <h3>Subscribe</h3>
-      <p>to get our latest updates</p>
-      <form class="subscribe-form">
-        <input type="email" placeholder="Email address" />
-        <button type="submit">Subscribe</button>
-      </form>
-    </div>
+  <!-- FOOTER (injected via includes/js/includes.js) -->
+  <div id="site-footer"></div>
 
-    <div class="footer-info">
-      <!-- Updated: corporate relationship instead of address -->
-      <p><em>Arsenal Nexus is a subdivision of Neilson Laboratories, Inc.</em></p>
-    </div>
-
-    <div class="footer-nav">
-      <div class="footer-column">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="company.html">About Us</a></li>
-          <li><a href="history.html">History</a></li>
-          <li><a href="careers.html">Careers</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h4>Products</h4>
-        <ul>
-          <li><a href="products.html">View Products</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h4>More</h4>
-        <ul>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p>© 2021–2025 Arsenal Nexus. All Rights Reserved.<br/>Denver, Colorado</p>
-    </div>
-  </footer>
+  <!-- Client‑side includes loader -->
+  <script src="js/includes.js"></script>
 
 </body>
 </html>
