@@ -20,7 +20,7 @@
   <!-- HERO BANNER -->
   <div class="hero">
     <h1>Welcome to Arsenal Nexus</h1>
-    <p>Innovative drone solutions for your business</p>
+    <p>innovative drone solutions for your business</p>
     <a href="company.html" class="btn">Learn More</a>
   </div>
 
@@ -61,5 +61,14 @@
 
   <!-- Client‑side includes loader -->
   <script src="js/includes.js"></script>
+
+  <script>
+  fetch('includes/header.html')
+    .then(r => r.text())
+    .then(html => {
+      document.getElementById('site-header').innerHTML = html;
+    })
+    .catch(e => console.error('Header load failed:', e));
+</script>
 </body>
 </html>

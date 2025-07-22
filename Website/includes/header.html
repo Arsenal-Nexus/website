@@ -1,23 +1,38 @@
-<nav class="nav">
-  <div class="logo">
-    <a href="index.html"><img src="images/headerLogo.png" alt="Arsenal Nexus Logo" /></a>
-  </div>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li class="dropdown">
-      <a class="dropbtn">Company</a>
-      <ul class="dropdown-content">
-        <li><a href="company.html">About Us</a></li>
-        <li><a href="our-team.html">Our Team</a></li>
-        <li><a href="careers.html">Careers</a></li>
-      </ul>
-    </li>
-    <li class="dropdown">
-      <a class="dropbtn">Products</a>
-      <ul class="dropdown-content">
-        <li><a href="products.html">View Products</a></li>
-      </ul>
-    </li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+<header class="site-header"
+        style="
+          background: linear-gradient(
+            90deg,
+            var(--color-primary) 0%,
+            var(--color-secondary) 100%
+          ) !important;
+          color: #fff !important;
+        ">
+  <style>
+    /* ensure no ::before/::after from other CSS bleeds through */
+    header.site-header::before,
+    header.site-header::after {
+      display: none !important;
+    }
+    /* force link visibility */
+    header.site-header .nav-links a {
+      color: #fff !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+  </style>
+  <nav class="nav container">
+    <a href="index.html" class="logo">
+      <!-- see step 2 below for logo path -->
+      <img src="images/headerLogo.png"
+           alt="Arsenal Nexus Logo"
+           style="display:block!important; max-height:120px!important; width:auto!important;" />
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="company.html">Company</a>
+      <a href="our-team.html">Team</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
