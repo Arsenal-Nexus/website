@@ -748,3 +748,42 @@ button:hover,
   opacity: 1 !important;
   visibility: visible !important;
 }
+
+/* ──────────────────────────────────────────────
+   Global list normalization (outside nav/footer)
+   ────────────────────────────────────────────── */
+ul, ol {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text);
+
+  list-style-type: disc;
+  list-style-position: outside;
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Preserve clean nav and footer list styles */
+.nav-links ul,
+.nav-links li,
+.footer-nav ul,
+.footer-nav li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+/* ─────────────────────────────────────────────
+   Consistent text color inside product cards
+   (excluding headers)
+   ───────────────────────────────────────────── */
+.product-card *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+  color: var(--color-text) !important;
+}

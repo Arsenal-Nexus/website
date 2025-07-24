@@ -1,13 +1,18 @@
 WIP     -fill out index.html
-DONE    -fix company and products links on header
-DONE    -standardize header and footer
         -fill out about us
-DONE    -fill out our team (awaiting heirarchy and headshots)
-        -update careers, one position (business major internships)
+        -update careers
             -where will this link to?
-        -fill out products
-            -gallery?
+WIP     -fill out products
         -update contact (make form work!)
         -email newsletter?
-        -verify legalese of privacy page
+WIP     -privacy page
+        -terms and conditions page
 WIP     -make CSS look nice
+WIP     -rf map page
+WIP     -base station page
+
+
+
+DONE    -fix company and products links on header
+DONE    -standardize header and footer
+DONE    -fill out our team
