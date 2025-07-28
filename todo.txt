@@ -10,7 +10,7 @@ WIP     -privacy page
 WIP     -make CSS look nice
 WIP     -rf map page
 WIP     -base station page
-
+        -accessibility features
 
 
 DONE    -fix company and products links on header

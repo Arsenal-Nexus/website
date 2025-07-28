@@ -1,0 +1,732 @@
+/* style-alt.css */
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* CSS Variables */
+:root {
+  --color-accent: #ef233c;
+  --color-bg: #edf2f4;
+  --color-muted: #6c757d;
+  --color-primary: #2b2d42;
+  --color-secondary: #8d99ae;
+  --color-surface: #ffffff;
+  --color-text: #2b2d42;
+  --font-sans: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --radius: 0.5rem;
+  --transition: 0.3s ease;
+}
+
+/* Reset & Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Global Links & Buttons */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+a:hover {
+  color: var(--color-accent);
+}
+button,
+.btn {
+  background-color: var(--color-accent);
+  border: none;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  transition: background-color var(--transition), transform 0.2s ease, box-shadow 0.2s ease;
+}
+button:hover,
+.btn:hover {
+  background-color: var(--color-primary);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  transform: translateY(-3px);
+}
+
+/* Typography Helpers */
+.section-title {
+  color: var(--color-primary);
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 4rem 0 2rem;
+  position: relative;
+  text-align: center;
+}
+.section-title::after {
+  background: var(--color-accent);
+  border-radius: var(--radius);
+  content: '';
+  display: block;
+  height: 4px;
+  margin: 0.5rem auto 0;
+  width: 6rem;
+}
+
+/* Header & Navigation */
+.site-header {
+  background-color: var(--color-surface);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 1rem 2rem;
+}
+.logo {
+  color: var(--color-primary);
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+.logo img {
+  width: auto;
+  display: block;
+  max-height: 120px;
+}
+.nav-links {
+  align-items: center;
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-links a {
+  padding: 0.5rem;
+  position: relative;
+}
+.nav-links a::after {
+  background: var(--color-accent);
+  bottom: -4px;
+  content: '';
+  height: 2px;
+  left: 0;
+  position: absolute;
+  transition: width var(--transition);
+  width: 0;
+}
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Dropdown */
+.nav-links .dropdown {
+  position: relative;
+}
+.nav-links .dropdown-content {
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: none;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 110%;
+}
+.nav-links .dropdown-content a {
+  color: var(--color-text);
+  display: block;
+  padding: 0.75rem 1rem;
+}
+.nav-links .dropdown-content a:hover {
+  background: var(--color-bg);
+}
+.nav-links .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Hero Section */
+.hero {
+  align-items: center;
+  background: url('../images/working.jpg') center/cover no-repeat;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
+.hero::before {
+  background: linear-gradient(45deg, rgba(43,45,66,0.8), rgba(239,35,60,0.8));
+  content: '';
+  inset: 0;
+  position: absolute;
+}
+.hero-content {
+  max-width: 800px;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 1;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+/* Company Section */
+.company {
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  margin: 2rem auto;
+  max-width: 800px;
+  padding: 3rem 1.5rem;
+}
+.company p {
+  color: var(--color-muted);
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+
+/* Products Section */
+.products {
+  padding: 4rem 0;
+}
+.product-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin: 0 auto;
+  max-width: 1200px;
+}
+.product-card {
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.product-card:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  transform: translateY(-5px);
+}
+.product-card img {
+  display: block;
+  width: 100%;
+}
+.product-card-content {
+  padding: 1.5rem;
+  text-align: center;
+}
+.product-card h3 {
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+.product-card p {
+  color: var(--color-muted);
+}
+
+/* Contact Section */
+.contact {
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  margin: 2rem auto;
+  max-width: 800px;
+  padding: 3rem 1.5rem;
+}
+.contact-form {
+  display: grid;
+  gap: 1rem;
+}
+.contact-form input,
+.contact-form textarea {
+  border: 1px solid var(--color-muted);
+  border-radius: var(--radius);
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.75rem;
+  width: 100%;
+}
+.contact-form button {
+  justify-self: start;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--color-primary);
+  color: #fff;
+  padding: 4rem 1rem 2rem;
+}
+.footer-content {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin: 0 auto;
+  max-width: 1200px;
+}
+.footer-column h4 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+.footer-column a {
+  color: #edf2f4;
+}
+.footer-column a:hover {
+  color: var(--color-accent);
+}
+.footer-bottom {
+  font-size: 0.875rem;
+  margin-top: 3rem;
+  opacity: 0.8;
+  text-align: center;
+}
+
+/* Team Section */
+.team {
+  background: var(--color-bg);
+  padding: 4rem 1rem;
+}
+.team-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin: 0 auto;
+  max-width: 1200px;
+}
+.team-member {
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 2rem 1rem;
+  text-align: center;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.team-member:hover {
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  transform: translateY(-3px);
+}
+.team-member img {
+  border-radius: 50%;
+  height: 120px;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  width: 120px;
+}
+.team-member h3 {
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+.team-member p {
+  color: var(--color-muted);
+}
+
+/* Responsive Utilities */
+
+/* 1. Make sure the gradient sits *behind* your text */
+.hero {
+  /* ensure a stacking context */
+  position: relative;
+}
+.hero::before {
+  /* gradient layer */
+  background: linear-gradient(45deg, rgba(43,45,66,0.8), rgba(239,35,60,0.8));
+  content: '';
+  inset: 0;
+  position: absolute;
+  z-index: 1;
+}
+.hero h1,
+.hero p,
+.hero .btn {
+  /* pull these above the gradient */
+  /* target any hero‑text elements */
+  position: relative;
+  z-index: 2;
+}
+
+/* 2. Remove only the *first* separator dot before Home,
+      but keep dots between the rest of your nav items */
+
+/* If your markup is a UL > LI list: */
+.nav-links {
+  /* kill default bullets */
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+.nav-links li {
+  list-style: none;
+  position: relative;
+}
+/* add a dot before every LI except the first one */
+.nav-links li:not(:first-child)::before {
+  /* match your accent color */
+  font-size: 1em;
+  color: black;
+  content: '•';
+  margin: 0 0.75rem;
+  vertical-align: middle;
+}
+
+.logo img {
+  display: block;
+  max-height: 40px;
+  width: auto;
+}
+
+/* —————————————————————————————
+   Padding inside each product card
+   ————————————————————————————— */
+.product-card {
+  /* give equal padding on all sides */
+  padding: 2rem;
+}
+
+/* ──────────────────────────────────────────
+   FOOTER: Horizontal layout + nice styling
+   ────────────────────────────────────────── */
+.site-footer {
+  background: var(--color-primary);
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+}
+
+/* Top-level sections all get equal share */
+.site-footer > .footer-subscribe,
+.site-footer > .footer-info,
+.site-footer > .footer-nav {
+  flex: 1 1 240px;
+  min-width: 240px;
+}
+
+/* Style the “Subscribe” block */
+.footer-subscribe h3,
+.footer-subscribe p {
+  margin-bottom: 1rem;
+}
+.subscribe-form {
+  display: flex;
+  gap: 0.5rem;
+}
+.subscribe-form input {
+  border: none;
+  border-radius: var(--radius);
+  flex: 1;
+  padding: 0.5rem;
+}
+.subscribe-form button {
+  padding: 0.5rem 1rem;
+}
+
+/* Corporate info: center the text */
+.footer-info {
+  align-items: center;
+  display: flex;
+  font-style: italic;
+  justify-content: center;
+}
+
+/* Nav columns */
+.footer-nav {
+  display: flex;
+  gap: 2rem;
+}
+.footer-nav .footer-column h4 {
+  margin-bottom: 0.75rem;
+}
+.footer-nav .footer-column ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.footer-nav .footer-column li + li {
+  margin-top: 0.5rem;
+}
+.footer-nav .footer-column a {
+  color: #edf2f4;
+  transition: color var(--transition);
+}
+.footer-nav .footer-column a:hover {
+  color: var(--color-accent);
+}
+
+/* Bottom bar spans full width */
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.2);
+  flex-basis: 100%;
+  font-size: 0.875rem;
+  margin-top: 2rem;
+  opacity: 0.8;
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.site-footer {
+  /* keep your existing justify/gap settings */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* explicitly order each section */
+.site-footer > .footer-subscribe {
+  order: 1;
+}
+.site-footer > .footer-nav       {
+  order: 2;
+}
+.site-footer > .footer-info      {
+  /* a little breathing room */
+  justify-content: center;
+  /* center the text */;
+  /* span the full width */
+  margin: 1rem 0;
+  flex-basis: 100%;
+  order: 3;
+}
+.site-footer > .footer-bottom    {
+  /* stay full‑width under the line */
+  flex-basis: 100%;
+  order: 4;
+}
+
+/* make sure the corporate info is centered */
+.footer-info {
+  align-items: center;
+  display: flex;
+  text-align: center;
+}
+
+.subscribe-form input {
+  /* never overflow its container */
+  /* prevent it from growing to fill */
+  width: 20rem;
+  /* set your desired width */
+  max-width: 100%;
+  flex: none !important;
+}
+
+/* ──────────────────────────────────────────
+   𝗥𝗲𝗱𝗼𝗻𝗲𝗱 𝗛𝗲𝗮𝗱𝗲𝗿
+   ────────────────────────────────────────── */
+
+/* 1) Sticky, gradient background with blur */
+.site-header {
+  backdrop-filter: blur(8px);
+  background: var(--color-primary);
+  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* 2) Container to center & pad */
+.site-header .container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0.75rem 1.5rem;
+}
+
+/* 3) Logo styling */
+.logo {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  transition: color var(--transition);
+}
+.logo:hover {
+  color: var(--color-accent);
+}
+
+/* 4) Desktop nav links */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+.nav-links a {
+  color: #edf2f4;
+  font-weight: 600;
+  padding: 0.5rem 0;
+  position: relative;
+  text-transform: uppercase;
+  transition: color var(--transition);
+}
+.nav-links a::after {
+  background: var(--color-accent);
+  bottom: 0;
+  content: '';
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  transition: transform var(--transition);
+  width: 100%;
+}
+.nav-links a:hover {
+  color: #fff;
+}
+.nav-links a:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.nav-links {
+  /* remove any mobile bg */
+  height: auto !important;
+  background: none !important;
+  opacity: 1 !important;
+  position: static !important;
+  transform: none !important;
+  visibility: visible !important;
+}
+
+/* 3) Make sure your header sits on top */
+.site-header {
+  /* or fixed/sticky if desired */
+  z-index: 1000;
+  position: relative;
+}
+
+/* ────────────────────────────────────
+   FORCE‑SHOW HEADER & LOGO
+   ──────────────────────────────────── */
+#site-header .site-header {
+  align-items: center;
+  background: var(--color-primary) !important;
+  display: flex !important;
+  justify-content: space-between;
+  padding: 1rem 2rem !important;
+}
+
+/* Nav links */
+#site-header .nav-links a {
+  color: #edf2f4 !important;
+  display: inline-block !important;
+  font-weight: 600 !important;
+  padding: 0.5rem !important;
+  text-transform: uppercase !important;
+}
+
+/* ──────────────────────────────────────────
+   Force‑reveal header links
+   ────────────────────────────────────────── */
+#site-header .nav-links {
+  background: transparent  !important;
+  display: flex            !important;
+  opacity: 1               !important;
+  overflow: visible        !important;
+  transform: none          !important;
+  visibility: visible      !important;
+  z-index: 2               !important;
+}
+
+#site-header .nav-links a {
+  color: #fff              !important;
+  opacity: 1               !important;
+  position: relative       !important;
+  text-decoration: none    !important;
+  visibility: visible      !important;
+  z-index: 3               !important;
+}
+
+/* ──────────────────────────────────────────
+   Force the header gradient background & light text
+   ────────────────────────────────────────── */
+#site-header .site-header {
+  background: linear-gradient(
+    90deg,
+    var(--color-primary) 0%,
+    var(--color-secondary) 100%
+  ) !important;
+  color: #fff !important;
+}
+
+/* make sure links stay bright on the gradient */
+#site-header .nav-links a {
+  color: #fff !important;
+}
+
+/* if there’s any semi‑opaque overlay hiding them */
+#site-header .site-header::before,
+#site-header .site-header::after {
+  display: none !important;
+}
+
+/* restore the logo image container */
+#site-header .logo img {
+  display: block !important;
+  max-height: 40px !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  width: auto !important;
+}
+
+/* ──────────────────────────────────────────────
+   Global list normalization (outside nav/footer)
+   ────────────────────────────────────────────── */
+ul, ol {
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  list-style-position: outside;
+  list-style-type: disc;
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Preserve clean nav and footer list styles */
+.nav-links ul,
+.nav-links li,
+.footer-nav ul,
+.footer-nav li {
+  font-family: inherit;
+  font-size: inherit;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ─────────────────────────────────────────────
+   Consistent text color inside product cards
+   (excluding headers)
+   ───────────────────────────────────────────── */
+.product-card *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+  color: var(--color-text) !important;
+}
