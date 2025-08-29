@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Arsenal Nexus - Mobile Base Station</title>
+  <link rel="stylesheet" href="dist/output.css">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png" />
+  <link rel="shortcut icon" href="images/favicon.png" />
+</head>
+<body class="bg-white text-gray-800 antialiased font-sans">
+  <!-- Navigation -->
+  <nav class="sticky top-0 bg-white/80 backdrop-blur-md shadow-md z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center">
+        <img src="headerLogo.png" alt="Arsenal Nexus logo" class="h-10">
+      </a>
+      <ul class="hidden md:flex space-x-8 text-gray-700 font-medium">
+        <li><a href="index.html" class="hover:text-green-600">Home</a></li>
+        <li><a href="products.html" class="text-green-600 font-semibold">Products</a></li>
+        <li><a href="about.html" class="hover:text-green-600">About</a></li>
+        <li><a href="contact.html" class="hover:text-green-600">Contact</a></li>
+      </ul>
+      <button class="md:hidden focus:outline-none" aria-label="Open Menu">
+        <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="relative overflow-hidden">
+    <div class="h-80 flex items-center justify-center text-center text-white"
+         style="background: url('images/plane.jpg') no-repeat center/cover;">
+      <div class="bg-black/40 px-6 py-10 rounded-lg">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-3">Mobile Base Station</h1>
+        <p class="text-lg md:text-xl mb-6">Rugged, portable command & connectivity for multi-drone operations</p>
+        <a href="contact.html"
+           class="inline-block bg-green-600 text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-green-700 transition">
+          Contact Sales
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="max-w-7xl mx-auto px-6 py-16 space-y-16">
+    <!-- Overview -->
+    <section id="overview">
+      <h2 class="text-3xl font-bold mb-4">Overview</h2>
+      <p class="bg-gray-50 rounded-xl p-6 shadow-sm border border-gray-100 leading-relaxed">
+        The Arsenal Nexus Mobile Base Station provides a reliable field hub for command, control, and data relay.
+        Designed for rapid deployment, it aggregates ground links, backhauls over 4G/5G or SATCOM*, and coordinates
+        fleets with built-in redundancy and power management. (*optional modules)
+      </p>
+    </section>
+
+    <!-- Key Features -->
+    <section id="features">
+      <h2 class="text-3xl font-bold mb-6">Key Features</h2>
+      <ul class="grid md:grid-cols-2 gap-4">
+        <li class="bg-gray-50 p-4 rounded-lg shadow-sm border border-gray-100">Multi-radio support (ISM/LTE/5G; modular)</li>
+        <li class="bg-gray-50 p-4 rounded-lg shadow-sm border border-gray-100">Automatic link failover & dual SIM</li>
+        <li class="bg-gray-50 p-4 rounded-lg shadow-sm border border-gray-100">Rugged IP-rated enclosure</li>
+        <li class="bg-gray-50 p-4 rounded-lg shadow-sm border border-gray-100">Integrated battery with hot-swap capability</li>
+        <li class="bg-gray-50 p-4 rounded-lg shadow-sm border border-gray-100">Web dashboard for fleet status & logs</li>
+        <li class="bg-gray-50 p-4 rounded-lg shadow-sm border border-gray-100">Edge compute slot for on-site processing</li>
+      </ul>
+    </section>
+
+    <!-- Specifications (dummy data) -->
+    <section id="specifications">
+      <h2 class="text-3xl font-bold mb-6">Specifications</h2>
+      <div class="overflow-x-auto bg-white rounded-xl shadow border border-gray-100">
+        <table class="min-w-full text-sm text-left">
+          <thead class="bg-gray-100">
+            <tr>
+              <th class="px-4 py-3 font-semibold text-gray-700">Parameter</th>
+              <th class="px-4 py-3 font-semibold text-gray-700">Value</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200">
+            <tr><td class="px-4 py-3">Backhaul</td><td class="px-4 py-3">4G/5G (Cat-M1 optional) · SATCOM*</td></tr>
+            <tr><td class="px-4 py-3">Local Links</td><td class="px-4 py-3">2.4/5.8 GHz ISM · Private LTE*</td></tr>
+            <tr><td class="px-4 py-3">Throughput</td><td class="px-4 py-3">Up to 300 Mbps aggregate*</td></tr>
+            <tr><td class="px-4 py-3">Power</td><td class="px-4 py-3">Internal Li-ion 480 Wh · 12–24 V DC in</td></tr>
+            <tr><td class="px-4 py-3">Runtime</td><td class="px-4 py-3">6–10 hrs typical (swappable packs)</td></tr>
+            <tr><td class="px-4 py-3">Environmental</td><td class="px-4 py-3">-10 °C to 50 °C · IP54*</td></tr>
+            <tr><td class="px-4 py-3">Dimensions</td><td class="px-4 py-3">430 × 280 × 170 mm (case)</td></tr>
+            <tr><td class="px-4 py-3">Weight</td><td class="px-4 py-3">&lt; 9.0 kg (configured)</td></tr>
+            <tr><td class="px-4 py-3">Price</td><td class="px-4 py-3">TBD</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-gray-500 mt-2">*Optional or configuration-dependent features.</p>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery">
+      <h2 class="text-3xl font-bold mb-6">Gallery</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <img src="images/products/mobile-base1.jpg" alt="Mobile base station case" class="w-full rounded-lg shadow">
+        <img src="images/products/mobile-base2.jpg" alt="Deployed base station with antennas" class="w-full rounded-lg shadow">
+        <img src="images/products/mobile-base3.jpg" alt="Dashboard UI on tablet" class="w-full rounded-lg shadow">
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta" class="text-center">
+      <h2 class="text-3xl font-bold mb-4">Ready to deploy in the field?</h2>
+      <p class="mb-6 text-gray-700">Talk to our team about configurations, coverage goals, and integration options.</p>
+      <a href="contact.html"
+         class="inline-block bg-green-600 text-white px-8 py-3 rounded-lg font-semibold shadow hover:bg-green-700 transition">
+        Get in Touch
+      </a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-400 py-6">
+    <div class="container mx-auto px-6 text-center space-y-2">
+      <p>© 2025 Arsenal Nexus. Based in Denver, CO.</p>
+      <div class="space-x-4">
+        <a href="privacypolicy.html" class="hover:text-white">Privacy Policy</a>
+        <a href="termsofservice.html" class="hover:text-white">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

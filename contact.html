@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Arsenal Nexus - Contact</title>
+  <link rel="stylesheet" href="dist/output.css">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png" />
+  <link rel="shortcut icon" href="images/favicon.png" />
+</head>
+<body class="bg-white text-gray-800 antialiased font-sans">
+  <!-- Navigation (brand-consistent) -->
+  <nav class="sticky top-0 bg-white/80 backdrop-blur-md shadow-md z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center">
+        <img src="headerLogo.png" alt="Arsenal Nexus logo" class="h-10">
+      </a>
+      <ul class="hidden md:flex space-x-8 text-gray-700 font-medium">
+        <li><a href="index.html" class="hover:text-green-600">Home</a></li>
+        <li><a href="products.html" class="hover:text-green-600">Products</a></li>
+        <li><a href="about.html" class="hover:text-green-600">About</a></li>
+        <li><a href="contact.html" class="text-green-600 font-semibold">Contact</a></li>
+      </ul>
+      <button class="md:hidden focus:outline-none" aria-label="Open Menu">
+        <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Header / Hero (similar color system, simpler layout) -->
+  <header class="relative overflow-hidden">
+    <div class="bg-gradient-to-r from-green-500 to-blue-600">
+      <div class="max-w-7xl mx-auto px-6 py-14 text-white">
+        <h1 class="text-4xl md:text-5xl font-extrabold">Contact Arsenal Nexus</h1>
+        <p class="mt-2 text-lg md:text-xl opacity-95">We’re based in Denver, CO — let’s talk about your RF & connectivity needs.</p>
+      </div>
+      <svg class="block w-full h-8 text-white" viewBox="0 0 1440 64" preserveAspectRatio="none" aria-hidden="true">
+        <path fill="currentColor" d="M0,64 L1440,0 L1440,64 Z"></path>
+      </svg>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="max-w-7xl mx-auto px-6 py-16">
+    <div class="grid gap-10 lg:grid-cols-3">
+      <!-- Contact Details -->
+      <aside class="lg:col-span-1 space-y-6">
+        <div class="bg-gray-50 rounded-xl p-6 shadow-sm border border-gray-100">
+          <h2 class="text-2xl font-bold mb-2">Get in Touch</h2>
+          <p class="text-gray-600">Mon–Fri · 9:00–5:00 (MT)</p>
+          <div class="mt-4 space-y-3 text-sm">
+            <p><span class="font-semibold text-gray-900">Email:</span> <a href="mailto:arsenalnexus@gmail.com" class="text-green-600 hover:underline">arsenalnexus@gmail.com</a></p>
+            <!-- <p><span class="font-semibold text-gray-900">Support:</span> <a href="mailto:support@arsenalnexus.com" class="text-green-600 hover:underline">support@arsenalnexus.com</a></p> -->
+            <p><span class="font-semibold text-gray-900">HQ:</span> Denver, Colorado</p>
+          </div>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6 shadow-sm border border-gray-100">
+          <h3 class="text-lg font-semibold mb-3">What can we help with?</h3>
+          <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+            <li>RF mapping pilots & deployments</li>
+            <li>Mobile base station packages</li>
+            <li>Custom integrations & consulting</li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Contact Form -->
+      <section id="contact-form" class="lg:col-span-2">
+        <div class="bg-white rounded-xl p-6 md:p-8 shadow-lg border border-gray-100">
+          <h2 class="text-2xl font-bold mb-6">Send Us a Message</h2>
+          <form id="contactForm" class="grid grid-cols-1 md:grid-cols-2 gap-6" action="https://formspree.io/f/xvgqebpk" method="POST">
+  <!-- Honeypot (spam protection): keep hidden -->
+  <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off">
+
+  <div class="col-span-1">
+    <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+    <input id="name" name="name" type="text" required
+           class="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
+           placeholder="Jane Doe">
+  </div>
+  <div class="col-span-1">
+    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Your Email</label>
+    <input id="email" name="email" type="email" required
+           class="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
+           placeholder="jane@example.com">
+  </div>
+  <div class="md:col-span-2">
+    <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+    <input id="subject" name="subject" type="text"
+           class="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
+           placeholder="How can we help?">
+  </div>
+  <div class="md:col-span-2">
+    <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
+    <textarea id="message" name="message" rows="6" required
+              class="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
+              placeholder="Tell us about your project, timeline, and requirements."></textarea>
+  </div>
+
+  <!-- Status area -->
+  <div class="md:col-span-2">
+    <button id="submitBtn" type="submit"
+            class="w-full md:w-auto inline-flex items-center justify-center px-6 py-3 rounded-lg bg-green-600 text-white font-semibold shadow hover:bg-green-700 transition">
+      Send Message
+    </button>
+    <p id="formStatus" class="mt-3 text-sm"></p>
+  </div>
+</form>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- Map / Location (placeholder) -->
+    <!-- <section class="mt-16">
+      <div class="bg-gray-50 rounded-xl p-4 shadow-sm border border-gray-100">
+        <div class="aspect-[16/9] w-full bg-gray-200 rounded-lg flex items-center justify-center text-gray-500"> -->
+          <!-- Replace with an actual map iframe if desired -->
+          <!-- <span class="text-sm">Map placeholder · Denver, CO</span>
+        </div>
+      </div>
+    </section> -->
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-400 py-6">
+    <div class="container mx-auto px-6 text-center space-y-2">
+      <p>© 2025 Arsenal Nexus. Based in Denver, CO.</p>
+      <div class="space-x-4">
+        <a href="privacypolicy.html" class="hover:text-white">Privacy Policy</a>
+        <a href="termsofservice.html" class="hover:text-white">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  (function() {
+    const form = document.getElementById('contactForm');
+    const statusEl = document.getElementById('formStatus');
+    const btn = document.getElementById('submitBtn');
+
+    // If JS is disabled, the form will still POST via the action URL.
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      statusEl.textContent = '';
+      btn.disabled = true;
+      btn.classList.add('opacity-70', 'cursor-not-allowed');
+
+      const formData = new FormData(form);
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: formData
+        });
+
+        if (res.ok) {
+          form.reset();
+          statusEl.className = 'mt-3 text-sm text-green-700';
+          statusEl.textContent = 'Thanks! Your message has been sent.';
+        } else {
+          statusEl.className = 'mt-3 text-sm text-red-700';
+          statusEl.textContent = 'Sorry, something went wrong. Please try again.';
+        }
+      } catch (err) {
+        statusEl.className = 'mt-3 text-sm text-red-700';
+        statusEl.textContent = 'Network error. Please check your connection and try again.';
+      } finally {
+        btn.disabled = false;
+        btn.classList.remove('opacity-70', 'cursor-not-allowed');
+      }
+    });
+  })();
+</script>
+
+
+</body>
+
+
+
+</html>

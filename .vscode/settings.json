@@ -1,0 +1,30 @@
+{
+    "liveServer.settings.port": 5501,
+
+  // Enable suggestions inside string literals (so class="…")
+  "editor.quickSuggestions": {
+    "strings": true
+  },                                                        // :contentReference[oaicite:3]{index=3}
+
+  // Turn off built‑in CSS validation so @apply/@tailwind don’t error
+  "css.validate": false,                                   // :contentReference[oaicite:4]{index=4}
+
+  // Tell the Tailwind extension which file types to scan
+  "tailwindCSS.includeLanguages": {
+    "html": "html",
+    "javascript": "javascript",
+    "javascriptreact": "html",
+    "typescriptreact": "html"
+  },                                                        // :contentReference[oaicite:5]{index=5}
+
+  // Let Emmet expand Tailwind shortcuts if you like
+  "emmet.triggerExpansionOnTab": true,
+
+  // Allow Emmet-style completions in class attributes
+  "tailwindCSS.emmetCompletions": true,
+
+  // Treat plain .css files as Tailwind (for hover and linting)
+  "files.associations": {
+    "*.css": "tailwindcss"
+  }                                                         // :contentReference[oaicite:6]{index=6}
+}
