@@ -1,0 +1,143 @@
+<!-- Command to run tailwind css (MUST BE COMMAND PROMPT, NOT POWERSHELL) -->
+<!-- npx postcss src/input.css -o dist/output.css --watch --verbose -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Arsenal Nexus</title>
+  <link rel="stylesheet" href="dist/output.css">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png" />
+  <link rel="shortcut icon" href="images/favicon.png" />
+</head>
+<body class="bg-white text-gray-800 antialiased font-sans">
+  <!-- Navigation -->
+  <nav class="sticky top-0 bg-white/80 backdrop-blur-md shadow-md z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center">
+        <img src="headerLogo.png" alt="Arsenal Nexus logo" class="h-10">
+      </a>
+      <ul class="hidden md:flex space-x-8 text-gray-700 font-medium">
+        <li><a href="index.html" class="text-green-600">Home</a></li>
+        <li><a href="products.html" class="hover:text-green-600">Products</a></li>
+        <li><a href="about.html" class="hover:text-green-600 font-semibold">About</a></li>
+        <li><a href="contact.html" class="hover:text-green-600">Contact</a></li>
+      </ul>
+      <button class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="relative overflow-hidden">
+    <div class="h-80 bg-gradient-to-r from-green-500 to-blue-600 transform -skew-y-3 origin-top-left">
+      <div class="transform skew-y-3 container mx-auto px-6 text-center text-white py-24">
+        <h1 class="text-5xl font-bold mb-4">Welcome to Arsenal Nexus</h1>
+        <p class="text-xl mb-6">Innovating RF Mapping &amp; Mobile Base Station Solutions<br>Designed and supported from Denver, CO.</p>
+        <a href="products.html" class="inline-block bg-white text-green-600 px-6 py-3 rounded-lg font-semibold shadow hover:opacity-90 transition">
+          Explore Our Solutions
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products Preview -->
+  <section id="products" class="container mx-auto px-6 py-16">
+    <h2 class="text-3xl font-bold text-center mb-12">Our Key Offerings</h2>
+    <div class="grid gap-8 md:grid-cols-2">
+      <!-- RF Mapping Preview -->
+      <div class="bg-gray-50 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1">
+        <img src="images/rfmapping.png" alt="RF Mapping System" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2">RF Mapping System</h3>
+          <p class="mb-4">Capture real-time spectrum data with GPS-tagged precision in a portable kit.</p>
+          <a href="rf-mapping.html" class="block text-center bg-green-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-700">
+            Learn More
+          </a>
+        </div>
+      </div>
+      <!-- Mobile Base Station Preview -->
+      <div class="bg-gray-50 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1">
+        <img src="images/plane.jpg" alt="Mobile Base Station" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2">Mobile Base Station</h3>
+          <p class="mb-4">Stay connected anywhere with 5G, integrated battery, and weather-resistant design.</p>
+          <a href="mobile-base.html" class="block text-center bg-green-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-700">
+            Learn More
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="bg-gray-100 py-16">
+    <div class="container mx-auto px-6 md:flex md:items-center">
+      <div class="md:w-1/2 mb-8 md:mb-0">
+        <img src="images/working.jpg" alt="Arsenal Nexus Team" class="rounded-lg shadow-lg">
+      </div>
+      <div class="md:w-1/2 md:pl-12">
+        <h2 class="text-3xl font-bold mb-4">About Arsenal Nexus</h2>
+        <p class="mb-4">Arsenal Nexus is a Denver-based startup specializing in cutting-edge RF mapping and drone swarm solutions. 
+          Our mission is to empower engineers and field operators with precise data and robust connectivity anywhere operations take you.</p>
+        <ul class="space-y-2">
+          <li class="flex items-center">
+            <svg class="w-5 h-5 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414L9 14.414l-3.707-3.707a1 1 0 10-1.414 1.414l4.414 4.414
+                       a1 1 0 001.414 0l8.414-8.414a1 1 0 00-1.414-1.414z"
+                    clip-rule="evenodd"/>
+            </svg>
+            Veteran RF &amp; Communications Experts
+          </li>
+          <li class="flex items-center">
+            <svg class="w-5 h-5 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414L9 14.414l-3.707-3.707a1 1 0 10-1.414 1.414l4.414 4.414
+                       a1 1 0 001.414 0l8.414-8.414a1 1 0 00-1.414-1.414z"
+                    clip-rule="evenodd"/>
+            </svg>
+            Custom Integration &amp; Support
+          </li>
+          <li class="flex items-center">
+            <svg class="w-5 h-5 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414L9 14.414l-3.707-3.707a1 1 0 10-1.414 1.414l4.414 4.414
+                       a1 1 0 001.414 0l8.414-8.414a1 1 0 00-1.414-1.414z"
+                    clip-rule="evenodd"/>
+            </svg>
+            Rapid Deployment from Denver, CO
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section id="contact" class="container mx-auto px-6 py-16 text-center">
+    <h2 class="text-3xl font-bold mb-4">Ready to Elevate Your RF Operations?</h2>
+    <p class="mb-6">Speak with our specialists to set up a solution that works for you.</p>
+    <a href="mailto:arsenalnexus@gmail.com" class="inline-block bg-green-600 text-white px-8 py-3 rounded-lg font-semibold shadow hover:bg-green-700 transition">
+      Contact Sales
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-400 py-6">
+    <div class="container mx-auto px-6 text-center space-y-2">
+      <p>© 2025 Arsenal Nexus. Based in Denver, CO.</p>
+      <div class="space-x-4">
+        <a href="privacypolicy.html" class="hover:text-white">Privacy Policy</a>
+        <a href="termsofservice.html" class="hover:text-white">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+
+</html>
