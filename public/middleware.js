@@ -6,8 +6,8 @@ export const config = {
 
 export default function middleware(req) {
   const auth = req.headers.get("authorization") || "";
-  const expectedUser = process.env.BASIC_AUTH_USER || "user";
-  const expectedPass = process.env.BASIC_AUTH_PASS || "secret";
+  const expectedUser = process.env.BASIC_AUTH_USER || "ArsenalTeam";
+  const expectedPass = process.env.BASIC_AUTH_PASS || "nolanhasnoknees";
 
   if (auth.startsWith("Basic ")) {
     const [, b64] = auth.split(" ");
